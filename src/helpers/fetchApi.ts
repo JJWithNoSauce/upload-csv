@@ -18,11 +18,14 @@ export const ip_image = "https://icefactory.projectsoft.co.th/customer_image/"
 export const GET = (path: string) => {
      return new Promise((resolve, reject) => {
           fetch(ip + path, {
+              
+              
                method: "GET",
                headers: {
                     "Content-Type": "application/json",
                },
           })
+          
                .then((response) => {
                     if (response.status === 401) {
                          // หาก Unauthorized ให้เปลี่ยนเส้นทางไปที่ /login
@@ -33,7 +36,10 @@ export const GET = (path: string) => {
                })
                .then((json) => resolve(json))
                .catch((err) => reject(err));
+               console.log('ip:', ip)
+               console.log('path:', path)
      });
+     
 };
 
 export const POST = (path: string, obj: any , formData: boolean) => {
