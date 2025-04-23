@@ -3,9 +3,16 @@
         border: 1px solid #bfe000;
         margin: 10px;
     }
-    .upload-button{
+    .assign-button{
         margin:10px;
         display: flex;        
+        justify-content: center;
+        align-content: center;
+    }
+    .upload-button{
+        margin:10px;
+        display: flex;
+        position: "right";        
         justify-content: center;
         align-content: center;
     }
